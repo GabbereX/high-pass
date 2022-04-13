@@ -1,0 +1,418 @@
+@media (max-width: 640px) {
+  .input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .button {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .header {
+    &__search-input {
+      height: 25px;
+    }
+  }
+
+  .masterclass {
+    &__author {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    &__portfolio-title {
+      top: 3px;
+      left: -1px;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .about-us {
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__paragraph {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__subscription-title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .projects {
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  .contacts {
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__study-name {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__address {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__request {
+      &-title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      &-paragraph {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__comment {
+      padding-top: 12px;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .logo {
+    width: 111px;
+  }
+
+  .header {
+    height: 70px;
+  }
+
+  .hashtag {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 21px;
+  }
+
+  .header {
+    &__menu {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: auto;
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
+
+      &--desktop {
+        display: none;
+      }
+      &--responsive {
+        display: initial;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: $color-very-dark-gray;
+        transform: translate(-1000px, 0);
+        transition: transform 0.4s ease;
+        z-index: 10;
+      }
+      &-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      &-item {
+        font-size: 24px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+      &--burger-button {
+        display: initial;
+        position: absolute;
+        top: 80px;
+        z-index: 6;
+        &-image {
+          width: 20px;
+          fill: $color-white;
+          transition: fill 0.3s ease;
+          &:hover {
+            fill: $color-orange;
+          }
+          &:focus {
+            outline: none;
+            fill: $strong-orange;
+          }
+          &:active {
+            fill: $dark-orange;
+          }
+          & > use {
+            pointer-events: none;
+          }
+        }
+      }
+      &--close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &-image {
+          fill: $color-light-dark-gray;
+          transition: fill 0.3s ease;
+          &:hover {
+            fill: $color-orange;
+          }
+          &:focus {
+            outline: none;
+            fill: $strong-orange;
+          }
+          &:active {
+            fill: $dark-orange;
+          }
+          & > use {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    &__search {
+      &-button-image {
+        width: 20px;
+      }
+      &-button--translate {
+        transform: translate(-139px, 0);
+      }
+      &-form {
+        width: 126px;
+      }
+    }
+  }
+
+  .masterclass {
+    padding-top: 75px;
+    margin-bottom: 50px;
+    &__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 422px;
+    }
+    &__hashtag {
+      top: 6px;
+      right: 5px;
+    }
+    &__photo > img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &__article {
+      background: url(../img/masterclass/article-masterclass-320.jpg) center
+        center / cover;
+    }
+    &__author {
+      position: relative;
+      left: -1px;
+      margin-bottom: 9px;
+    }
+    &__title {
+      position: relative;
+      left: -2px;
+      margin-bottom: 15px;
+    }
+    &__button {
+      width: 145px;
+    }
+  }
+
+  .about-us {
+    padding-top: 32px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+    &__subscription {
+      padding-top: 0;
+      &-title {
+        position: relative;
+        top: 3px;
+        left: -2px;
+      }
+      &-input {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .projects {
+    margin-bottom: 58px;
+  }
+
+  .contacts {
+    margin-bottom: 30px;
+    &__container {
+      padding: 0;
+    }
+    &__title {
+      padding-left: 20px;
+    }
+    &__location-info {
+      grid-template-columns: minmax(100px, 590px);
+    }
+    &__map {
+      width: 100%;
+      height: 463px;
+    }
+    &__company-info {
+      padding: 17px 36px 0 19px;
+    }
+    &__study-name {
+      margin-bottom: 17px;
+    }
+    &__request {
+      width: 100%;
+    }
+    &__address {
+      position: relative;
+      top: -6px;
+      width: 300px;
+      line-height: 18px;
+    }
+    &__tel {
+      position: relative;
+      top: 6px;
+      left: -1px;
+    }
+    &__request {
+      padding: 0 21px;
+      &-title {
+        margin-bottom: 9px;
+      }
+      &-paragraph {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .footer {
+    height: 185px;
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding: 0;
+    }
+    &__left {
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 0px;
+      padding-top: 0px;
+      height: 62px;
+      width: 100%;
+      background: $color-light-dark-gray;
+    }
+    &__company-name {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    &__right {
+      margin-top: 27px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .projects {
+    &__list {
+      grid-template-columns: minmax(100px, 378px);
+      grid-template-rows: 278px 278px 278px 422px 300px 300px 422px;
+      gap: 24px;
+    }
+    &__item {
+      &--small-one,
+      &--small-two,
+      &--small-three,
+      &--medium-one,
+      &--medium-two,
+      &--big-one,
+      &--big-two {
+        grid-column: 1 / 1;
+      }
+      &--small-three {
+        position: relative;
+        top: 1px;
+      }
+      &--big-one {
+        background: url(../img/projects/projects-4-320.jpg) 100% / cover;
+      }
+      &--big-two {
+        top: 8px;
+        background: url(../img/projects/projects-5-320.jpg) 100% / cover;
+        & > article {
+          padding-bottom: 93px;
+        }
+      }
+      &--medium-one {
+        top: 6px;
+      }
+      &-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 86px;
+      }
+    }
+    &__paragraph-article {
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 218px;
+    }
+    &__date--article {
+      margin-bottom: 10px;
+    }
+    &__title-article {
+      margin-bottom: 10px;
+      width: 218px;
+    }
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__hashtag {
+      top: 5px;
+      right: 5px;
+      padding: 3px 14px;
+    }
+    &__paragraph {
+      margin-bottom: 10px;
+      &--small {
+        -webkit-line-clamp: 2;
+        min-height: 44px;
+      }
+    }
+    &__button-article {
+      padding: 9px 18px;
+    }
+  }
+
+  .contacts {
+    &__address {
+      max-width: 267px;
+    }
+  }
+}

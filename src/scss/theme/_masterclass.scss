@@ -1,0 +1,53 @@
+.masterclass {
+  padding-top: 41px;
+  margin-bottom: $section-bottom-gap;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    padding: 60px;
+
+    color: $color-white;
+    background: url(../img/masterclass/article-masterclass-1920.jpg) center
+      center / cover;
+  }
+  &__author {
+    margin-bottom: 3px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 37px;
+    font-weight: 700;
+  }
+  &__button {
+    width: 160px;
+  }
+  &__hashtag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &__portfolio-title {
+    position: relative;
+    top: -7px;
+    margin-bottom: 19px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  &__photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+  }
+  &__photo--main {
+    grid-column: 1 / 3;
+  }
+}

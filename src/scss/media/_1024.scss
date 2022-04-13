@@ -1,0 +1,209 @@
+@media (max-width: 1124px) {
+  $logo-width: 166px;
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .logo {
+    max-width: 166px;
+  }
+
+  .header {
+    position: relative;
+    height: 81px;
+    &__container {
+      grid-template-columns: 244px 1fr 100px;
+    }
+    &__menu-list {
+      margin-left: 0;
+      margin-right: auto;
+      max-width: 566px;
+    }
+    &__social-icons {
+      display: none;
+    }
+    &__search {
+      &-button {
+        display: initial;
+      }
+      &-form {
+        display: initial;
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        z-index: 100;
+        transition: opacity 0.3s ease;
+        &--visible {
+          opacity: 1;
+        }
+      }
+      &-input {
+        width: 100%;
+        height: 36px;
+        font-family: $ttfirstneue;
+        color: $color-white;
+        font-size: 14px;
+        text-align: center;
+        background: $color-dark-gray;
+        &::placeholder {
+          color: $color-very-light-gray;
+        }
+      }
+      &-button {
+        margin-left: auto;
+        padding-right: 2px;
+        &-image {
+          fill: $color-medium-gray;
+          transition: fill 0.3s ease;
+          &:hover {
+            fill: $color-orange;
+          }
+          &:focus {
+            outline: none;
+            fill: $strong-orange;
+          }
+          &:active {
+            fill: $dark-orange;
+          }
+          & > use {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  .masterclass {
+    padding-top: 34px;
+    &__article {
+      padding: 30px;
+      background: url(../img/masterclass/article-masterclass-1024.jpg) center
+        center / cover;
+    }
+    &__author {
+      margin-bottom: 11px;
+    }
+    &__title {
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    &__portfolio-title {
+      top: 0;
+      margin-bottom: 27px;
+    }
+  }
+
+  .about-us {
+    &__subscription-photo {
+      margin-bottom: 22px;
+      min-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .projects {
+    &__list {
+      grid-template-columns: 0.95fr 0.41fr 0.41fr 0.41fr 0.68fr 0.69fr;
+      grid-template-rows: 285px 307px 307px;
+      row-gap: 24px;
+    }
+    &__item {
+      &--small-two {
+        grid-column: 2 / 4;
+      }
+      &--small-three {
+        grid-column: 4 / 7;
+      }
+      &--big-one {
+        grid-column: 1 / 5;
+        order: 1;
+        background: url(../img/projects/projects-4-1024.jpg) 100% / cover;
+      }
+      &--big-two {
+        order: 4;
+        grid-column: 3 / 7;
+        background: url(../img/projects/projects-5-1024.jpg) 100% / cover;
+      }
+      &--medium-one {
+        grid-column: 5 / 7;
+        order: 2;
+      }
+      &--medium-two {
+        order: 3;
+        grid-column: 1 / 3;
+      }
+      &-article {
+        padding: 31px 30px;
+      }
+    }
+    &__preview > img {
+      min-width: 100%;
+      object-fit: cover;
+      margin-bottom: 18px;
+    }
+    &__paragraph {
+      max-width: 97%;
+      margin-bottom: 17px;
+      &--small {
+        -webkit-line-clamp: 2;
+        max-height: 44px;
+      }
+    }
+    &__button-article {
+      bottom: 33px;
+    }
+  }
+
+  .contacts {
+    margin-bottom: 61px;
+    &__location-info {
+      grid-template-columns: auto 342px;
+    }
+    &__company-info {
+      padding: 6px 56px 0 30px;
+      bottom: 0;
+      height: 157px;
+      width: 100%;
+    }
+    &__address {
+      display: initial;
+      width: 293px;
+    }
+    &__tel {
+      padding-left: 5px;
+      &-icon {
+        position: relative;
+        top: -4px;
+        left: 3px;
+      }
+    }
+  }
+
+  .footer {
+    &__left {
+      padding-top: 4px;
+      margin-right: 83px;
+    }
+    &__center {
+      margin-right: 20px;
+    }
+    &__right {
+      padding-top: 4px;
+      margin-right: 3px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-us {
+    padding-bottom: 81px;
+    &__subscription-input {
+      min-width: calc(100% - 127px);
+      margin-bottom: 21px;
+    }
+  }
+}

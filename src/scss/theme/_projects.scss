@@ -1,0 +1,110 @@
+.projects {
+  margin-bottom: $section-bottom-gap;
+  &__title {
+    margin-bottom: 13px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns:
+      repeat(3, minmax(100px, 190px))
+      repeat(2, minmax(200px, 300px));
+    gap: $gap;
+    grid-auto-rows: 300px;
+  }
+  &__item {
+    position: relative;
+    &--big-one {
+      grid-column: 4 / 6;
+      background: url(../img/projects/projects-4-1920.jpg);
+    }
+    &--big-two {
+      grid-column: 1 / 4;
+      background: url(../img/projects/projects-5-1920.jpg);
+    }
+  }
+  &__hashtag {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 6px 14px;
+  }
+  &__preview > img {
+    height: 184px;
+    margin-bottom: 18px;
+    object-fit: none;
+    object-position: left top;
+  }
+  &__paragraph {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+    overflow: hidden;
+    max-height: 66px;
+    line-height: 22px;
+  }
+  &__date {
+    position: relative;
+    &--article {
+      margin-bottom: 4px;
+    }
+  }
+  &__calendar-icon {
+    fill: $color-gray;
+    margin-right: 6px;
+    &--article {
+      fill: $color-white;
+      margin-right: 5px;
+    }
+  }
+  &__time {
+    position: absolute;
+    color: $color-gray;
+    font-size: 12px;
+    line-height: 22px;
+    &--article {
+      color: $color-white;
+    }
+  }
+  &__item-article {
+    position: relative;
+    padding: 23px 30px;
+    height: 100%;
+    color: $color-white;
+  }
+  &__title-article {
+    margin-bottom: 6px;
+    width: 293px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  &__paragraph-article {
+    width: 292px;
+    line-height: 22px;
+  }
+  &__button-article {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    padding: 12px 20px;
+    background: transparent;
+    border: 3px solid $color-orange;
+    transition: border 0.1s ease, background 0.3s ease;
+    &:hover {
+      background: $color-orange;
+    }
+    &:focus {
+      background: $strong-orange;
+      outline: 3px solid $color-orange;
+    }
+    &:active {
+      outline: none;
+      border: 3px solid transparent;
+      background: $dark-orange;
+    }
+  }
+}

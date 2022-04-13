@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.svg" sizes="any" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-48x48.png"
+      sizes="48x48"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-64x64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <!-- fonts -->
+    <link
+      rel="preload"
+      href="./fonts/roboto/regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/roboto/bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/ttfirstneue/regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/ttfirstneue/medium.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/ttfirstneue/bold.woff2"
+      as="font"
+      crossorigin
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css" media="screen" />
+    <!-- js -->
+    <script defer src="./js/main.js"></script>
+    <!-- title -->
+    <title>High Pass</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container header__container">
+        <a href="/" class="header__logo" tabindex="-1">
+          <img
+            src="./img/sprite.svg#logo"
+            alt="Логотип сайта High Pass"
+            class="logo"
+          />
+        </a>
+        <nav class="header__menu header__menu--desktop">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">О студии</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Наши проекты</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Услуги</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Мастер-классы</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="header__menu--burger-button"
+          tabindex="-1"
+          id="burgerButton"
+        >
+          <svg
+            width="25"
+            height="25"
+            vierwbox="0 0 25 25"
+            class="header__menu--burger-button-image"
+            id="burgerButtonImage"
+            tabindex="0"
+          >
+            <use xlink:href="./img/sprite.svg#burger"></use>
+          </svg>
+        </button>
+
+        <div class="header__menu--responsive" id="responsiveMenu">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">О студии</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Наши проекты</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Услуги</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Мастер-классы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Контакты</a>
+              </li>
+            </ul>
+
+            <button class="header__menu--close-button" tabindex="-1">
+              <svg
+                width="20"
+                height="20"
+                vierwbox="0 0 20 20"
+                class="header__menu--close-button-image"
+                tabindex="0"
+                id="closeMenu"
+              >
+                <use xlink:href="./img/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </nav>
+        </div>
+
+        <ul class="social-icons header__social-icons">
+          <li class="social-icons__item">
+            <a href="#" class="social-icons__link" tabindex="-1">
+              <svg
+                width="30"
+                height="30"
+                vierwbox="0 0 30 30"
+                class="social-icons__image"
+                tabindex="0"
+              >
+                <use xlink:href="./img/sprite.svg#social-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons__item">
+            <a href="#" class="social-icons__link" tabindex="-1">
+              <svg
+                width="30"
+                height="30"
+                vierwbox="0 0 30 30"
+                class="social-icons__image"
+                tabindex="0"
+              >
+                <use xlink:href="./img/sprite.svg#social-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons__item">
+            <a href="#" class="social-icons__link" tabindex="-1">
+              <svg
+                width="30"
+                height="30"
+                vierwbox="0 0 30 30"
+                class="social-icons__image"
+                tabindex="0"
+              >
+                <use xlink:href="./img/sprite.svg#social-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button
+          class="header__search-button"
+          tabindex="-1"
+          form="searchForm"
+          id="searchButton"
+        >
+          <svg
+            width="25"
+            height="25"
+            vierwbox="0 0 25 25"
+            class="header__search-button-image"
+            id="searchButtonImage"
+            tabindex="0"
+          >
+            <use xlink:href="./img/sprite.svg#search"></use>
+          </svg>
+        </button>
+        <form class="header__search-form" tabindex="-1" id="searchForm">
+          <input
+            type="text"
+            class="input header__search-input"
+            id="searchInput"
+            placeholder="Что будем искать?"
+          />
+        </form>
+      </div>
+    </header>
+    <main class="main">
+      <section class="masterclass">
+        <div class="container masterclass__container">
+          <article class="masterclass__article">
+            <p class="masterclass__author">Мастер-класс от Игоря Робова</p>
+            <h1 class="masterclass__title">
+              Неоновый фотосет 2.0 7&nbsp;июля 20:00
+            </h1>
+            <a href="#" class="button masterclass__button">Узнать больше</a>
+            <a href="#" class="hashtag masterclass__hashtag">#мастеркласс</a>
+          </article>
+          <div class="masterclass__portfolio">
+            <h2 class="masterclass__portfolio-title">
+              Работы участников предыдущего мастер-класса
+            </h2>
+            <div class="masterclass__photo-grid">
+              <picture class="masterclass__photo masterclass__photo--main">
+                <source
+                  media="(max-width: 320px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-1-masterclass-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-1-masterclass-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-1-masterclass-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-1-masterclass-1920.jpg"
+                />
+                <img
+                  src="./img/masterclass/photo-1-masterclass-1920.jpg"
+                  alt="Тематическое изображение"
+                />
+              </picture>
+              <picture class="masterclass__photo">
+                <source
+                  media="(max-width: 320px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-2-masterclass-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-2-masterclass-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-2-masterclass-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-2-masterclass-1920.jpg"
+                />
+                <img
+                  src="./img/masterclass/photo-2-masterclass-1920.jpg"
+                  alt="Тематическое изображение"
+                />
+              </picture>
+              <picture class="masterclass__photo">
+                <source
+                  media="(max-width: 320px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-3-masterclass-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-3-masterclass-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-3-masterclass-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/masterclass/photo-3-masterclass-1920.jpg"
+                />
+                <img
+                  src="./img/masterclass/photo-3-masterclass-1920.jpg"
+                  alt="Тематическое изображение"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container about-us__container">
+          <div class="about-us__information">
+            <h2 class="about-us__title">О студии</h2>
+            <p class="about-us__paragraph">
+              В&nbsp;рамках спецификации современных стандартов, интерактивные
+              прототипы, инициированные исключительно синтетически, ограничены
+              исключительно образом мышления. Предварительные выводы
+              неутешительны: высокотехнологичная концепция общественного уклада
+              требует от&nbsp;нас анализа соответствующих условий активизации!
+              Следует отметить, что семантический разбор внешних противодействий
+              фиксирует необходимость распределения внутренних резервов
+              и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет
+              широкие возможности для первоочередных требований. Повседневная
+              практика показывает, что глубокий уровень погружения предполагает
+              независимые способы реализации новых принципов формирования
+              материально-технической и&nbsp;кадровой базы. Приятно, граждане,
+              наблюдать, как явные признаки институционализации являются только
+              методом политического участия и&nbsp;нарушающими общечеловеческие
+              нормы этики.
+            </p>
+          </div>
+          <div class="about-us__subscription">
+            <picture>
+              <source
+                media="(max-width: 590px)"
+                type="image/jpeg"
+                srcset="./img/aboutus/camera-320.jpg"
+              />
+              <source
+                media="(max-width: 780px)"
+                type="image/jpeg"
+                srcset="./img/aboutus/camera-768.jpg"
+              />
+              <source
+                media="(max-width: 1124px)"
+                type="image/jpeg"
+                srcset="./img/aboutus/camera-1024.jpg"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/aboutus/camera-1920.jpg"
+              />
+              <img
+                src="./img/aboutus/camera-1920.jpg"
+                alt="Тематическое изображение"
+                class="about-us__subscription-photo"
+              />
+            </picture>
+            <h3 class="about-us__subscription-title">
+              Подписаться на рассылку
+            </h3>
+            <form action="about-us__subscription-form">
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="input about-us__subscription-input"
+              />
+              <button class="button about-us__subscription-button">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container projects__container">
+          <h2 class="projects__title">Наши проекты</h2>
+          <ul class="projects__list">
+            <li class="projects__item projects__item--small-one">
+              <picture class="projects__preview">
+                <source
+                  media="(max-width: 420px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-1-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-1-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-1-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-1-1920.jpg"
+                />
+                <img
+                  src="./img/projects/projects-1-1920.jpg"
+                  alt="Публикация 1"
+                />
+              </picture>
+              <p class="projects__paragraph projects__paragraph--small">
+                Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
+                до&nbsp;степени ++++++
+              </p>
+              <div class="projects__date">
+                <svg
+                  width="12"
+                  height="14"
+                  vierwbox="0 0 12 14"
+                  class="projects__calendar-icon"
+                >
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg>
+                <time class="projects__time">16 июня</time>
+              </div>
+              <a href="#" class="hashtag projects__hashtag">#пейзаж</a>
+            </li>
+
+            <li class="projects__item projects__item--small-two">
+              <picture class="projects__preview">
+                <source
+                  media="(max-width: 420px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-2-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-2-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-2-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-2-1920.jpg"
+                />
+                <img
+                  src="./img/projects/projects-2-1920.jpg"
+                  alt="Публикация 2"
+                />
+              </picture>
+              <p class="projects__paragraph projects__paragraph--small">
+                В&nbsp;своём стремлении улучшить опыт мы упускаем, что явные
+                ++++++++++++++++++++++++++++++++++++++++++
+              </p>
+              <div class="projects__date">
+                <svg
+                  width="12"
+                  height="14"
+                  vierwbox="0 0 12 14"
+                  class="projects__calendar-icon"
+                >
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg>
+                <time class="projects__time">28 мая</time>
+              </div>
+              <a href="#" class="hashtag projects__hashtag">#портрет</a>
+            </li>
+
+            <li class="projects__item projects__item--small-three">
+              <picture class="projects__preview">
+                <source
+                  media="(max-width: 420px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-3-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-3-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-3-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-3-1920.jpg"
+                />
+                <img
+                  src="./img/projects/projects-3-1920.jpg"
+                  alt="Публикация 3"
+                />
+              </picture>
+              <p class="projects__paragraph projects__paragraph--small">
+                Равным образом, высокое качество позиционных высокотехнологичная
+                концепция общественного уклада
+              </p>
+              <div class="projects__date">
+                <svg
+                  width="12"
+                  height="14"
+                  vierwbox="0 0 12 14"
+                  class="projects__calendar-icon"
+                >
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg>
+                <time class="projects__time">14 мая</time>
+              </div>
+              <a href="#" class="hashtag projects__hashtag">#предмет</a>
+            </li>
+
+            <li class="projects__item projects__item--big-one">
+              <article class="projects__item-article">
+                <div class="projects__date projects__date--article">
+                  <svg
+                    width="12"
+                    height="14"
+                    vierwbox="0 0 12 14"
+                    class="projects__calendar-icon--article"
+                  >
+                    <use xlink:href="./img/sprite.svg#calendar"></use>
+                  </svg>
+                  <time class="projects__time projects__time--article">
+                    9 апреля
+                  </time>
+                </div>
+                <h3 class="projects__title-article">Семантический разбор</h3>
+                <p class="projects__paragraph-article">
+                  В&nbsp;рамках спецификации современных стандартов,
+                  интерактивные прототипы
+                </p>
+                <button class="button projects__button-article">
+                  О проекте
+                </button>
+                <a href="#" class="hashtag projects__hashtag">#fuji</a>
+              </article>
+            </li>
+
+            <li class="projects__item projects__item--big-two">
+              <article class="projects__item-article">
+                <div class="projects__date projects__date--article">
+                  <svg
+                    width="12"
+                    height="14"
+                    vierwbox="0 0 12 14"
+                    class="projects__calendar-icon--article"
+                  >
+                    <use xlink:href="./img/sprite.svg#calendar"></use>
+                  </svg>
+                  <time class="projects__time projects__time--article">
+                    20 марта
+                  </time>
+                </div>
+                <h3 class="projects__title-article">Забвение</h3>
+                <p class="projects__paragraph-article">
+                  Играет важную роль в&nbsp;формировании глубокомысленных
+                  рассуждений
+                </p>
+                <button class="button projects__button-article">
+                  О проекте
+                </button>
+                <a href="#" class="hashtag projects__hashtag">
+                  #проектзабвение
+                </a>
+              </article>
+            </li>
+
+            <li class="projects__item projects__item--medium-one">
+              <picture class="projects__preview">
+                <source
+                  media="(max-width: 420px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-6-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-6-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-6-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-6-1920.jpg"
+                />
+                <img
+                  src="./img/projects/projects-6-1920.jpg"
+                  alt="Публикация 6"
+                />
+              </picture>
+              <p class="projects__paragraph">
+                Как принято считать, многие известные личности
+                и&nbsp;по&nbsp;сей день остаются уделом либералов
+                ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              </p>
+              <div class="projects__date">
+                <svg
+                  width="12"
+                  height="14"
+                  vierwbox="0 0 12 14"
+                  class="projects__calendar-icon"
+                >
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg>
+                <time class="projects__time">9 марта</time>
+              </div>
+              <a href="#" class="hashtag projects__hashtag">#ретушь</a>
+            </li>
+
+            <li class="projects__item projects__item--medium-two">
+              <picture class="projects__preview">
+                <source
+                  media="(max-width: 420px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-7-320.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-7-768.jpg"
+                />
+                <source
+                  media="(max-width: 1124px)"
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-7-1024.jpg"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./img/projects/projects-7-1920.jpg"
+                />
+                <img
+                  src="./img/projects/projects-7-1920.jpg"
+                  alt="Публикация 7"
+                />
+              </picture>
+              <p class="projects__paragraph">
+                С&nbsp;учётом сложившейся международной обстановки, новая модель
+                организационной...
+              </p>
+              <div class="projects__date">
+                <svg
+                  width="12"
+                  height="14"
+                  vierwbox="0 0 12 14"
+                  class="projects__calendar-icon"
+                >
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg>
+                <time class="projects__time">1 марта</time>
+              </div>
+              <a href="#" class="hashtag projects__hashtag">#портрет</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container contacts__container">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__location-info">
+            <div class="contacts__map" id="map">
+              <div class="contacts__company-info">
+                <h3 class="contacts__study-name">Студия "High pass"</h3>
+
+                <address class="contacts__address">
+                  107045, Москва, Даев переулок, дом 41, бизнес-центр
+                  &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
+                  <a href="tel:+749542423532" class="contacts__tel">
+                    <svg
+                      width="18"
+                      height="18"
+                      vierwbox="0 0 18 18"
+                      class="contacts__tel-icon"
+                    >
+                      <use xlink:href="./img/sprite.svg#tel"></use>
+                    </svg>
+                    +7 (495) 42-423-532
+                  </a>
+                </address>
+
+                <button class="contacts__close-button" tabindex="-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    vierwbox="0 0 20 20"
+                    class="contacts__close-button-image"
+                    tabindex="0"
+                  >
+                    <use
+                      xlink:href="./img/sprite.svg#close"
+                      id="closeLocation"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="contacts__request">
+              <h3 class="contacts__request-title">Оставить заявку</h3>
+              <p class="contacts__request-paragraph">
+                Оставьте ваши данные, указав в графе “Комментарий” желаемые
+                время и дату съемки или другого мероприятия
+              </p>
+              <form action="POST" class="contacts__form">
+                <input
+                  type="text"
+                  placeholder="Имя"
+                  class="input contacts__input-name contacts__enter-data"
+                />
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="input contacts__input-email contacts__enter-data"
+                />
+                <textarea
+                  name="comments"
+                  id="comments"
+                  placeholder="Комментарий"
+                  class="input contacts__comment contacts__enter-data"
+                ></textarea>
+                <button class="button contacts__button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__left">
+          <a href="/" class="footer__logo" tabindex="-1">
+            <img
+              src="./img/sprite.svg#logo"
+              alt="Логотип сайта High Pass"
+              class="logo"
+            />
+          </a>
+          <span class="footer__company-name">
+            Фотостудия High pass® 2018-2020
+          </span>
+        </div>
+        <div class="footer__center">
+          <p class="footer__quote">
+            Которая из моих фотографий самая любимая? Та, которую я собираюсь
+            снять завтра.
+          </p>
+          <span class="footer__quote-author">© Имоджен Каннингем</span>
+        </div>
+        <div class="footer__right">
+          <span class="footer__right-title">Больше интересного:</span>
+          <ul class="social-icons footer__social-icons">
+            <li class="social-icons__item">
+              <a href="#" class="social-icons__link" tabindex="-1">
+                <svg
+                  width="30"
+                  height="30"
+                  vierwbox="0 0 30 30"
+                  class="social-icons__image"
+                  tabindex="0"
+                >
+                  <use xlink:href="./img/sprite.svg#social-insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icons__item">
+              <a href="#" class="social-icons__link" tabindex="-1">
+                <svg
+                  width="30"
+                  height="30"
+                  vierwbox="0 0 30 30"
+                  class="social-icons__image"
+                  tabindex="0"
+                >
+                  <use xlink:href="./img/sprite.svg#social-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icons__item">
+              <a href="#" class="social-icons__link" tabindex="-1">
+                <svg
+                  width="30"
+                  height="30"
+                  vierwbox="0 0 30 30"
+                  class="social-icons__image"
+                  tabindex="0"
+                >
+                  <use xlink:href="./img/sprite.svg#social-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      function init() {
+        const myMap = new ymaps.Map(
+            'map',
+            {
+              center: [55.758375, 37.615557],
+              zoom: 13,
+              controls: [],
+            },
+            {
+              suppressMapOpenBlock: true,
+            }
+          ),
+          myPlacemark = new ymaps.Placemark(
+            [55.763832, 37.629125],
+            {},
+            {
+              iconLayout: 'default#image',
+              iconImageHref: './img/map/icon.png',
+              iconImageSize: [12, 12],
+              iconImageOffset: [0, 0],
+            }
+          );
+
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+      }
+    </script>
+  </body>
+</html>

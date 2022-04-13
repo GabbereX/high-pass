@@ -1,0 +1,43 @@
+.footer {
+  height: 106px;
+  background: $color-very-dark-gray;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__left {
+    position: relative;
+    top: -2px;
+  }
+  &__company-name {
+    position: relative;
+    top: 3px;
+    color: $color-very-light-gray;
+    font-family: $ttfirstneue;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__center {
+    padding-top: 6px;
+    margin-right: 129px;
+    width: 360px;
+    line-height: 22px;
+  }
+  &__quote {
+    color: $color-light-gray;
+    &-author {
+      color: $color-very-light-dark-gray;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+      color: $color-light-gray;
+      margin-bottom: 12px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.contacts {
+  margin-bottom: $section-bottom-gap - 6px;
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 23px;
+  }
+  &__location-info {
+    display: grid;
+    grid-template-columns: minmax(590px, 850px) minmax(342px, 410px);
+    gap: $gap;
+  }
+  &__map {
+    position: relative;
+    width: 100%;
+    height: 460px;
+  }
+  &__company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 22px 50px 0 60px;
+    width: calc(50% - 15px);
+    height: 100%;
+    color: $color-white;
+    background: rgba($color-very-dark-gray, 0.85);
+    z-index: 5;
+  }
+  &__study-name {
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    color: $color-light-gray;
+    line-height: 28px;
+    margin-bottom: 3px;
+  }
+  &__tel {
+    width: 180px;
+    font-family: $ttfirstneue;
+    line-height: 20px;
+    transition: color 0.3s ease, background 0.3s ease;
+    &-icon {
+      fill: $color-white;
+      transition: fill 0.3s ease;
+    }
+    &:hover,
+    &:hover > &-icon {
+      color: $color-orange;
+      fill: $color-orange;
+    }
+    &:focus {
+      color: $color-white;
+      outline: 2px solid $color-orange;
+      outline-offset: 0;
+      background: $color-orange;
+    }
+    &:focus > &-icon {
+      fill: $color-white;
+    }
+  }
+  &__close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    &-image {
+      fill: $color-very-light-dark-gray;
+      pointer-events: none;
+      transition: fill 0.3s ease;
+      &:hover {
+        fill: $color-orange;
+      }
+      &:active {
+        fill: $dark-orange;
+      }
+      &:focus {
+        outline: none;
+        fill: $strong-orange;
+      }
+      & > use {
+        pointer-events: visible;
+      }
+    }
+  }
+  &__request {
+    position: relative;
+    top: -6px;
+    &-title {
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 22px;
+    }
+    &-paragraph {
+      margin-bottom: 14px;
+      color: $color-light-gray;
+      line-height: 22px;
+    }
+  }
+  &__enter-data {
+    margin-bottom: 20px;
+    width: 100%;
+    background: $color-very-light-gray;
+  }
+  &__comment {
+    height: 150px;
+    resize: none;
+  }
+}

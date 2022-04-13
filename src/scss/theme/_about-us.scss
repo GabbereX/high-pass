@@ -1,0 +1,44 @@
+.about-us {
+  padding-top: $gap;
+  padding-bottom: $section-bottom-gap + 1px;
+  margin-bottom: $section-bottom-gap;
+  color: $color-light-gray;
+  background: $color-very-dark-gray;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  &__paragraph {
+    line-height: 28px;
+  }
+  &__subscription {
+    padding-top: 33px;
+    margin-bottom: auto;
+  }
+  &__subscription-photo {
+    margin-bottom: 25px;
+    min-height: 255px;
+    object-fit: none;
+  }
+  &__subscription-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+  &__subscription-input {
+    margin-right: $gap;
+    min-width: calc(100% - 160px);
+    color: $color-white;
+    background: $color-light-dark-gray;
+    &::placeholder {
+      color: $color-light-gray;
+    }
+  }
+}
